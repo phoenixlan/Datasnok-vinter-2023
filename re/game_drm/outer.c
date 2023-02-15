@@ -22,16 +22,12 @@ int main(int argc, char** argv) {
     GetTempPath(MAX_PATH, tempPath);
     GetTempFileName(tempPath, "temp", 0, tempName);
 
-    printf("Generating file\n");
-
     HANDLE hFile = CreateFile(tempName, GENERIC_WRITE, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
     if (hFile == INVALID_HANDLE_VALUE)
     {
         sprintf("Failed to create file: 0x%lx\n", GetLastError());
         return 1;
     }
-
-    printf("Writing file\n");
 
     // Write some data to the file
     DWORD bytesWritten = 0;
@@ -43,7 +39,8 @@ int main(int argc, char** argv) {
         return 1;
     }
 
-    printf("Wrote temp file to %s\n", tempName);
+    //Close the file handle
+    CloseHandle(hFile);
 
     //Load the DLL and get handle to the internal file
     HANDLE hDll = LoadLibraryA(tempName);
@@ -51,6 +48,8 @@ int main(int argc, char** argv) {
         printf("Failed to load library: 0x%lx\n", GetLastError());
         return 1;
     }
+    //Stop others from peeping by re-opening the file handle
+    hFile = CreateFile(tempName, GENERIC_WRITE, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
 
     int (*inner_func)(int, char**) = GetProcAddress(hDll, "Run");
     if(!inner_func) {
