@@ -4,7 +4,9 @@ Poeng: 50
 
 ## Oppgavetekst
 
-Bjarne har tatt inspirasjon fra spillindustrien. I stedet for å kryptere flagget, beskytter han heller hele programmet!
+Bjarne har tatt inspirasjon fra spillindustrien. I stedet for å kryptere flagget, beskytter han heller hele programmet! Denne gangen er det et Windows-program.
+
+**!!!NB!!! Dette programmet pakker ut seg selv, og har derfor en oppførsel antivirus kan bestemme seg for å reagere på**
 
 ## Læringsmål
 
