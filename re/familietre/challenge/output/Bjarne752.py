@@ -1,0 +1,26 @@
+
+from .Bjarne271 import Bjarne271
+
+
+class Bjarne752(Bjarne271):
+    def __init__(self):
+        
+        super().__init__()
+        
+
+        
+        
+        
+        
+        self.d = "l3375P33k"
+        
+        
+        
+        self.f = "Pho3N1X"
+        
+        
+        self.g = "Pho3N1X"
+        
+    
+    def get_password(self):
+        return "%s.%s.%s.%s.%s.%s" % (self.a, self.b, self.c, self.g, self.e, self.f)

@@ -11,9 +11,12 @@ int main(int argc, char** argv) {
     printf("--Protected by bjarne secure protector--\n");
 
     // Decrypt the inner program
+    unsigned char carry = 0b10101010;
     unsigned char* decrypted_buffer = malloc(inner_dll_encrypted_len);
     for(int i = 0; i < inner_dll_encrypted_len; i++) {
-        decrypted_buffer[i] = inner_dll_encrypted[i] ^ key[i % 4];
+        unsigned char cipher_byte = inner_dll_encrypted[i] ^ key[i % 4] ^ carry;
+        carry ^= key[i % 4];
+        decrypted_buffer[i] = cipher_byte;
     }
 
     // Generate a random file name
