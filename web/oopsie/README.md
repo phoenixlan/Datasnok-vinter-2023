@@ -1,6 +1,6 @@
 # Oopsie
 
-Poeng: 15
+Poeng: 10
 
 ## Oppgavetekst
 

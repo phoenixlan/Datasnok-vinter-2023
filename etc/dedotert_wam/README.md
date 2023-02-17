@@ -1,12 +1,12 @@
 # Dedotert WAM
 
-Poeng: 20
+Poeng: 25
 
 ## Oppgavetekst
 
 Bjarne har en minecraft-base og har beskyttet den med en passord-beskyttet dør med 16 spaker! Det er veldig mye tilfeldighet. Kun en kombinasjon åpner døra.
 
-Vi har ekstrahert låsen fra basen med world-edit, og har lagt den i en fil slik at du kan undersøke den. Finner du den hemmelige kombinasjonen?
+Vi har ekstrahert låsen fra basen med worldedit, og har lagt den i en fil slik at du kan undersøke den. Finner du den hemmelige kombinasjonen?
 
 ## Læringsmål
 

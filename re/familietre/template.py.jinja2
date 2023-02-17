@@ -1,0 +1,34 @@
+{% if class_parent %}
+from .{{ class_parent }} import {{ class_parent }}
+{% endif %}
+
+class {{ classname }}{% if class_parent %}({{ class_parent}}){% endif %}:
+    def __init__(self):
+        {% if class_parent and should_super %}
+        super().__init__()
+        {% endif %}
+
+        {% if passwords.a %}
+        self.a = "{{ passwords.a }}"
+        {% endif %}
+        {% if passwords.b %}
+        self.b = "{{ passwords.b }}"
+        {% endif %}
+        {% if passwords.c %}
+        self.c = "{{ passwords.c }}"
+        {% endif %}
+        {% if passwords.d %}
+        self.d = "{{ passwords.d }}"
+        {% endif %}
+        {% if passwords.e %}
+        self.e = "{{ passwords.e }}"
+        {% endif %}
+        {% if passwords.f %}
+        self.f = "{{ passwords.f }}"
+        {% endif %}
+        {% if passwords.g %}
+        self.g = "{{ passwords.g }}"
+        {% endif %}
+    
+    def get_password(self):
+        return "%s.%s.%s.%s.%s.%s" % (self.a, self.b, self.c, self.g, self.e, self.f)

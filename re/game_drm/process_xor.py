@@ -14,8 +14,12 @@ keys=[int(args.key[i:i+2],16) for i in range(0,len(args.key),2)]
 
 encrypted = b""
 
+carry_key = 0b10101010
+
 for idx, c in enumerate(data):
-    c_e = c ^ keys[idx % len(keys)]
+    c_e = c ^ keys[idx % len(keys)] ^ carry_key
+    carry_key ^=  keys[idx % len(keys)]
+
     encrypted += c_e.to_bytes(1, 'little')
 
 with open(args.output, 'wb') as file:
