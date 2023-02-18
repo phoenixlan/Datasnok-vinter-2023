@@ -18,6 +18,7 @@ Vi har lagt ved passord-generatoren. Vi benytter oss av `Bjarne1988`. Hva er pas
 
 ## Løsning
 
+Letteste løsning er å importere klassen `Bjarne1988` og kalle get_password. Passordet er `5w4G4d3Ll1c.l3375P33k.c00l5sh.l3375P33k.8jaRn3.IrhAh`
 
 Flagg:
 
