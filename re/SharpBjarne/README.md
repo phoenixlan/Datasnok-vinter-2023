@@ -1,6 +1,6 @@
 # Sharp Bjarne
 
-Bjarne har laget et program i C# for sitt hemmelige prosjekt, han har lagt til noen sikkerhets fungsjoner som hindrer uatoriserte personer til å kjøre koden. Klarer du å finne det ut for å få flagget? 
+Bjarne har laget et program i C# for sitt hemmelige prosjekt, han har lagt til noen sikkerhets fungsjoner som hindrer uatoriserte personer til å kjøre koden. Klarer du å finne det ut for å få flagget?
 
 # Løsning 
 
